@@ -1,0 +1,358 @@
+@import url(./reset.css);
+:root{
+    --white: #fff;
+    --black: #000;
+    --black-transparent: rgba(0, 0, 0, 0.75)
+}
+/* Body */
+
+p{
+    font-family: Sanchez, sans-serif;
+}
+
+h1 h2 h3 h4 h5 h6{
+    font-family: Montserrat, sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    display: flex;
+    background-color: var(--black-transparent);
+    box-shadow: 0px 3px 2.5px;
+    padding: 1rem 0rem 0rem;
+}
+.header__menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__menu hr{
+    width: 100%;
+    height: 0.05rem;
+    background-color: var(--black);
+}
+
+.header__menu .header__menu--big-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__menu .header__menu--big-screen li{
+    display: flex;
+    width: 15%;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.header__menu .header__menu--big-screen li > a{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+.header__menu .header__menu--small-screen{
+    display: none;
+}
+
+/* Main */
+
+
+
+main{
+    display: flex;
+    margin: 3% 0%;
+    background-color: var(--white);
+    padding: 3% 5%;
+    flex-direction: row;
+    box-shadow: 5px 0px 5px;
+    width: 60%;
+    align-self: center;
+    min-width: 768px;
+    max-width: 1024px;
+}
+
+/* Lateral */
+
+.main__lateral{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    background-color: var(--black);
+    border: var(--white) double;
+    border-width: 0rem 0.5rem 0.5rem;
+    position: relative;
+    top: -60px;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+}
+
+
+
+/* Content */
+
+.main__content{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin: 0rem 0rem 0rem 2rem;
+}
+
+.main__content hr{
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--black);
+}
+
+.main__content__name{
+    font-weight: bold;
+}
+
+/* About Me */
+
+.about{
+    display: flex;
+    flex-direction: column;
+}
+
+.about h2{
+    font-size: 1.5rem;
+    margin: 3rem 0rem 2rem;
+}
+
+.about p{
+    text-align: justify;
+}
+
+/* Skills */
+
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h2{
+    font-size: 1.5rem;
+    margin: 3rem 0rem 2rem;
+}
+
+.skills__lang{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills__lang h3{
+    font-size: 1.25rem;
+    margin: 1.5rem 0rem 1rem;
+}
+
+.skills__lang__group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills__lang__group__ele{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% 2.5%;
+    width: 15%;
+}
+
+.skills__lang__group__ele img{
+    width: 100%;
+}
+
+.skills__lang__group__ele p{
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.skills__tools{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills__tools h3{
+    font-size: 1.25rem;
+    margin: 1.5rem 0rem 1rem;
+}
+
+.skills__tools__group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills__tools__group__ele{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% 2.5%;
+    width: 15%;
+}
+
+.skills__tools__group__ele * + *{
+    margin-top: 0.5rem;
+}
+
+.skills__tools__group__ele img{
+    width: 100%;
+}
+
+.skills__tools__group__ele p{
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Portfolio */
+
+.certificates{
+    display: flex;
+    flex-direction: column;
+}
+
+.certificates h2{
+    font-size: 1.5rem;
+    margin: 3rem 0rem 2rem;
+}
+
+.certificates__group{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.certificates__group__element{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0rem 1rem;
+    align-items: center;
+}
+
+.certificates__group__element + .certificates__group__element{
+    margin: 0rem 0 rem 1rem;
+}
+
+.certificates__group__element__image{
+    display: flex;
+    width: 45%;
+    height: 7.5rem;
+}
+
+.certificates__group__element__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.5rem;
+    width: 55%;
+}
+
+.certificates__group__element__title hr{
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--black);
+    margin: 0%;
+}
+
+.certificates__group__element__title h3{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    width: 100%;
+    padding: 2% 5% 3%;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Curriculum */
+
+.curriculum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.curriculum h1{
+    text-align: center;
+}
+
+.curriculum hr{
+    width: 40%;
+    height: 0.25rem;
+    background-color: var(--black);
+}
+
+.curriculum__group{
+    margin: 2% 0% 0%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.curriculum__group__ele{
+    display: flex;
+    flex-direction: row;
+    border: solid var(--black-transparent);
+    border-width: 1px 0px;
+    padding: 0rem 1rem;
+}
+
+.curriculum__group__ele__img{
+    width: 15%;
+}
+
+.curriculum__group__ele__info{
+    padding: 0.5rem 1rem;
+}
+
+.curriculum__group__ele__info * + *{
+    margin: 0.5rem;
+}
+
+.curriculum__group__ele__info h3{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.curriculum__group__ele + .curriculum__group__ele{
+    border-width: 0px 0px 1px;
+}
