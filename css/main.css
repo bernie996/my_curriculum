@@ -87,7 +87,7 @@ header{
 
 main{
     display: flex;
-    margin: 3% 0%;
+    margin: 3% 0% 10%;
     background-color: var(--white);
     padding: 3% 5%;
     flex-direction: row;
@@ -296,30 +296,41 @@ main{
 footer{
     display: flex;
     width: 100%;
-    padding: 2% 5% 3%;
-    background-color: green;
+    padding: 2% 0% 2%;
+    background-color: var(--black);
     position: absolute;
     bottom: 0;
+    justify-content: center;
+    box-shadow: 0px -5px 5px;
 }
 
-/* Curriculum */
+footer h2{
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px;
+    color: var(--white);
+}
 
-.curriculum{
+/* Subpages */
+
+.subpage{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
-.curriculum h1{
+.subpage__header{
     text-align: center;
 }
 
-.curriculum hr{
+.subpage hr{
     width: 40%;
     height: 0.25rem;
     background-color: var(--black);
 }
+
+/* Curriculum */
 
 .curriculum__group{
     margin: 2% 0% 0%;
@@ -332,7 +343,7 @@ footer{
     display: flex;
     flex-direction: row;
     border: solid var(--black-transparent);
-    border-width: 1px 0px;
+    border-width: 2px 0px;
     padding: 0rem 1rem;
 }
 
@@ -355,4 +366,92 @@ footer{
 
 .curriculum__group__ele + .curriculum__group__ele{
     border-width: 0px 0px 1px;
+}
+
+/* Contact */
+
+.contact{
+    display: flex;
+    width: 70%;
+    border: solid var(--black);
+    border-width: 0px 2px;
+    padding: 1%;
+    min-width: 720px;
+}
+.contact__left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__left * + *{
+    margin-top: 0.5rem;
+}
+.contact__left__ele{
+    display: flex;
+    align-content: center;
+}
+.contact__left__ele * + *{
+    margin-left: 1rem;
+}
+.contact__left__ele img{
+    width: 15%;
+}
+.contact__left__ele a{
+    display: inline-block;
+    width: 85%;
+    color: var(--black);
+    font-size: 1.125rem;
+}
+
+/* Portfolio */
+
+.portfolio{
+    display: flex;
+    width: 80%;
+    flex-wrap: nowrap;
+}
+
+.portfolio__ele{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem;
+}
+.portfolio__ele__left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2.5% 5%;
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 2px var(--black);
+}
+.portfolio__ele__left img{
+    width: 100%;
+}
+.portfolio__ele__left h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0%;
+}
+.portfolio__ele__left p{
+    text-align: justify;
+}
+.portfolio__ele__right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 5% 5%;
+}
+.portfolio__ele__right h3{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+.portfolio__ele__right ul{
+    padding: 5% 5%;
+}
+.portfolio__ele__right ul li{
+    font-size: 1.25rem;
+    list-style:disc;
 }
