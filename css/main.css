@@ -49,25 +49,62 @@ header{
 .header__menu hr{
     width: 100%;
     height: 0.05rem;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
-.header__menu .header__menu--big-screen {
-    width: 100%;
+.header__menu--vertical{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__menu--vertical img{
+    width: 10%;
+}
+
+.header__menu--vertical img:hover{
+    cursor: pointer;
+}
+
+.header__menu--vertical--ele{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    transition: all 2s;
+}
+
+.header__menu--vertical--ele > *{
+    width: 100%;
+    padding: 1%;
+    margin: 0.5% 0%;
+    border: 2px solid var(--white);
+    background-color: var(--black-transparent);
+}
+
+.header__menu--vertical--ele a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header__menu--big-screen{
+    width: 100%;
+    display: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.header__menu .header__menu--big-screen li{
-    display: flex;
+.header__menu--big-screen li{
+    display: none;
     width: 15%;
     height: 2.5rem;
     justify-content: center;
     align-items: center;
 }
-.header__menu .header__menu--big-screen li > a{
+.header__menu--big-screen li > a{
     display: block;
     width: 100%;
     height: auto;
@@ -77,9 +114,23 @@ header{
     text-decoration: none;
     font-size: 1.25rem;
 }
-.header__menu .header__menu--small-screen{
+.header__menu--small-screen{
     display: none;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.header__menu--small-screen img{
+    width: 2rem;
+    transition: all 0.5s;
+}
+
+.header__menu--small-screen img:hover{
+    transform: scale(1.25);
+}
+
 
 /* Main */
 
@@ -87,21 +138,25 @@ header{
 
 main{
     display: flex;
-    margin: 3% 0% 10%;
+    margin: 5% 5% 20%;
     background-color: var(--white);
-    padding: 3% 5%;
-    flex-direction: row;
+    padding: 5% 0%;
+    flex-direction: column;
     box-shadow: 5px 0px 5px;
-    width: 60%;
+    width: 90%;
     align-self: center;
-    min-width: 768px;
-    max-width: 1024px;
+    max-width: 400px;
 }
+/*
+@media only screen and (max-width: 1024px){
+
+};
+*/
 
 /* Lateral */
 
 .main__lateral{
-    display: flex;
+    display: none;
     width: 30%;
     flex-direction: column;
     background-color: var(--black);
@@ -119,7 +174,7 @@ main{
 
 .main__content{
     display: flex;
-    width: 70%;
+    width: 100%;
     flex-direction: column;
     margin: 0rem 0rem 0rem 2rem;
 }
