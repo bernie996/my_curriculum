@@ -15,7 +15,7 @@ h1 h2 h3 h4 h5 h6{
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 1px;
 }
 
@@ -27,10 +27,19 @@ h2{
     background-color: var(--black);
     color: var(--white);
     position: relative;
-    left: -1.5rem;
+    left: 0rem;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
-    clip-path: polygon(0% 0%, 100% 0, 90% 50%, 100% 100%, 0% 100%);
 
+}
+
+@media only screen and (min-width: 480px){
+    h1{
+        font-size: 2rem;
+    }
+    .index__h2{
+        left: -1.5rem;
+        clip-path: polygon(0% 0%, 100% 0, 90% 50%, 100% 100%, 0% 100%);
+    }
 }
 
 body{
@@ -67,9 +76,12 @@ body{
 header{
     width: 100%;
     display: flex;
+    position: relative;
+    top: 0px;
     background-color: var(--black-transparent);
     box-shadow: 0px 3px 2.5px;
     padding: 1rem 0rem 0rem;
+    z-index: 40;
 }
 .header__menu{
     width: 100%;
@@ -117,9 +129,17 @@ header{
     background-color: var(--black-transparent);
 }
 
+.header__menu--vertical--ele li{
+    transition: 1s;
+}
+
 .header__menu--vertical--ele a{
     color: var(--white);
     text-decoration: none;
+}
+
+.header__menu--vertical--ele li:hover{
+    transform: translateX(-0.1rem) translateY(-0.1rem);
 }
 
 .header__menu--big-screen{
@@ -165,6 +185,9 @@ header{
 }
 
 @media only screen and (min-width: 480px) {
+    header{
+        position: fixed;
+    }
     .header__menu--vertical{
         display: none;
     }
@@ -189,22 +212,35 @@ header{
 
 main{
     display: flex;
-    margin: 5% 5% 20%;
+    margin: 10% 0% 25%;
     background-color: var(--white);
     padding: 2.5% 2.5%;
     flex-direction: row;
-    box-shadow: 5px 0px 5px;
-    width: 80%;
+    box-shadow: 2px 0px 5px;
+    width: 90%;
     align-self: center;
 }
 
+@media only screen and (min-width: 480px) {
+    main{
+        margin: 20% 5% 20%;
+        width: 80%;
+        box-shadow: 5px 0px 5px;
+    }
+ }
+
+ @media only screen and (min-width: 768px) {
+    main{
+        margin: 12.5% 5% 12.5%;
+    }
+ }
 
 /* Lateral */
 
 .main__lateral{
     display: none;
     width: 30%;
-    padding: 5% 0%;
+    padding: 5% 0% 15%;
     flex-direction: column;
     align-items: center;
     background-color: var(--black);
@@ -216,17 +252,26 @@ main{
     z-index: 20;
 }
 
-.main__lateral > * + *{
+.main__lateral__content{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 100px;
+    align-items: center;
+    width: 100%;
+}
+
+.main__lateral__content > * + *{
     margin-top: 0.5rem;
 }
 
-.main__lateral img{
+.main__lateral__content > img{
     width: 80%;
     border: double var(--white);
     border-width: 0.25rem;
 }
 
-.main__lateral > h2, h3{
+.main__lateral__content > h2, h3{
     color: white;
 }
 
@@ -271,12 +316,18 @@ main{
 }
 
 .about h2{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 3rem 0rem 2rem;
 }
 
 .about p{
     text-align: justify;
+}
+
+@media only screen and (min-width: 480px){
+    .about h2{
+        font-size: 1.5rem;
+    }
 }
 
 /* Skills */
@@ -287,7 +338,7 @@ main{
 }
 
 .skills h2{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 3rem 0rem 2rem;
 }
 
@@ -297,8 +348,10 @@ main{
 }
 
 .skills__lang h3{
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 1.5rem 0rem 1rem;
+    font-weight: bold;
+    color: var(--black);
 }
 
 .skills__lang__group{
@@ -331,8 +384,10 @@ main{
 }
 
 .skills__tools h3{
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 1.5rem 0rem 1rem;
+    font-weight: bold;
+    color: var(--black);
 }
 
 .skills__tools__group{
@@ -363,6 +418,18 @@ main{
     font-weight: bold;
 }
 
+@media only screen and (min-width: 480px){
+    .skills h2{
+        font-size: 1.5rem;
+    }
+    .skills__lang h3{
+        font-size: 1.25rem;
+    }
+    .skills__tools h3{
+        font-size: 1.25rem;
+    }
+}
+
 /* Portfolio */
 
 .certificates{
@@ -371,7 +438,7 @@ main{
 }
 
 .certificates h2{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 3rem 0rem 2rem;
 }
 
@@ -412,6 +479,12 @@ main{
     font-size: 1rem;
     text-align: center;
     font-weight: bolder;
+}
+
+@media only screen and (min-width: 480px){
+    .certificates h2{
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -664,5 +737,11 @@ footer h2{
     }
     .portfolio__ele > * + *{
         margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 480){
+    main{
+        margin: 10% 5% 25%;
     }
 }
