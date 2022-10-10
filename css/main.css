@@ -4,6 +4,10 @@
     --black: #000;
     --black-transparent: rgba(0, 0, 0, 0.75)
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 /* Body */
 
 p{
@@ -219,6 +223,8 @@ main{
     box-shadow: 2px 0px 5px;
     width: 90%;
     align-self: center;
+    animation: delayed__down;
+    animation-duration: 1s;
 }
 
 @media only screen and (min-width: 480px) {
@@ -250,6 +256,8 @@ main{
     top: -70px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
     z-index: 20;
+    animation: delayed__down;
+    animation-duration: 1.5s;
 }
 
 .main__lateral__content{
@@ -282,6 +290,8 @@ main{
     width: 100%;
     flex-direction: column;
     margin: 0rem 0rem 0rem 0rem;
+    animation: delayed__down;
+    animation-duration: 1.25s;
 }
 
 
@@ -351,7 +361,13 @@ main{
     font-size: 1rem;
     margin: 1.5rem 0rem 1rem;
     font-weight: bold;
-    color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    background-color: var(--black);
+}
+
+.skills__lang i{
+    transform: rotate(-90deg);
 }
 
 .skills__lang__group{
@@ -387,7 +403,13 @@ main{
     font-size: 1rem;
     margin: 1.5rem 0rem 1rem;
     font-weight: bold;
-    color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    background-color: var(--black);
+}
+
+.skills__tools i{
+    transform: rotate(-90deg);
 }
 
 .skills__tools__group{
@@ -417,6 +439,24 @@ main{
     font-size: 0.75rem;
     font-weight: bold;
 }
+
+
+.accordion > i{
+    transition: all 0.25s ease-in-out;
+}
+
+.panel{
+    display: none;
+    animation: delayed__down;
+    animation-duration: 1s;
+}
+
+@keyframes delayed__down {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
 
 @media only screen and (min-width: 480px){
     .skills h2{
@@ -745,3 +785,4 @@ footer h2{
         margin: 10% 5% 25%;
     }
 }
+
