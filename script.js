@@ -17,3 +17,11 @@ for (let i = 0; i < accordion.length; i++) {
         }
       });
 }
+function openHeader(){
+    let header = document.getElementById("header__menu--vertical--ele")
+    if (header.style.display === "flex") {
+        header.style.display = "none"
+    } else {
+        header.style.display = "flex"
+    }
+}
