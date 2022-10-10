@@ -279,8 +279,55 @@ main{
     border-width: 0.25rem;
 }
 
-.main__lateral__content > h2, h3{
+.main__lateral__content__id{
+
+}
+
+.main__lateral__content__id > h2, h3{
     color: white;
+    text-align: center;
+}
+
+.main__lateral__content__id > h3{
+    position: relative;
+    float: left;
+}
+
+.main__lateral__content__id > span{
+    position: absolute;
+    background: var(--black);
+    right: 0;
+    width: 0;
+    border-left: 1px solid var(--white);
+    animation: type 3s 1 alternate steps(67);
+}
+
+@keyframes type {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+.main__lateral__content > a {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0px 0px 10px var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border: var(--black) 1px solid;
+    transition: all 0.5s;
+}
+
+.main__lateral__content > a:hover {
+    border-color: var(--white);
+    box-shadow: 0px 0px 4px var(--white);
+
 }
 
 /* Content */
@@ -684,7 +731,7 @@ footer h2{
     width: 50%;
 }
 .contact__group__ele img{
-    width: 80%;
+    width: 4git 0%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -736,7 +783,6 @@ footer h2{
 }
 .portfolio__ele__left img{
     width: 100%;
-    max-width: 300px;
 }
 .portfolio__ele__left h2{
     font-size: 1.5rem;
@@ -756,6 +802,7 @@ footer h2{
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
+    color: var(--black);
 }
 .portfolio__ele__right ul{
     padding: 5% 5%;
@@ -765,15 +812,43 @@ footer h2{
     list-style:disc;
 }
 
+.portfolio__ele__right ul li + li{
+    margin-top: 0.25rem;
+}
+
+.portfolio__ele__right__buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.portfolio__ele__right__buttons > a{
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0px 0px 10px var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border: var(--black) 1px solid;
+    transition: all 0.5s;
+}
+
+.portfolio__ele__right__buttons > a:hover{
+    color: var(--white);
+    background-color: var(--black);
+    box-shadow: 0px 0px 10px var(--white);
+}
+
 @media only screen and (min-width: 480px){
     .portfolio__ele{
         flex-direction: row;
     }
     .portfolio__ele__left{
-        width: 70%;
+        width: 50%;
     }
     .portfolio__ele__right{
-        width: 30%;
+        width: 50%;
     }
     .portfolio__ele > * + *{
         margin-left: 1rem;
