@@ -7,22 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sanchez&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preload" href="./css/main.css" as="style">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bernie Portfalio</title>
 </head>
 <body>
-  <header>
+  <header id="header">
+    <a href="./index.html">
+      <img src="./img/logo.png" id="logo__header" alt="">
+    </a>
     <nav class="header__menu">
       <div class="header__menu--vertical">
         <button onclick="openHeader()"><img src="./img/menu__icon.png" alt=""></button>
-        <ul class="header__menu--vertical--ele" id="header__menu--vertical--ele">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./curriculum.html">Curriculum</a></li>
-          <li><a href="./portfolio.html">Portafolios</a></li>
-          <li><a href="./contact.html">Contacto</a></li>
-        </ul>
       </div>
       <ul class="header__menu--big-screen">
         <li><a href="./index.html">Inicio</a></li>
@@ -36,8 +34,13 @@
         <li><a href="./portfolio.html"><img src="./img/portfolio__icon.png" alt=""></a></li>
         <li><a href="./contact.html"><img src="./img/contact__icon.png" alt=""></a></li>
       </ul>
-    <hr>
     </nav>
+    <ul class="header__menu--vertical--ele" id="header__menu--vertical--ele">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./curriculum.html">Curriculum</a></li>
+      <li><a href="./portfolio.html">Portafolios</a></li>
+      <li><a href="./contact.html">Contacto</a></li>
+    </ul>
 </header>
     <main class="subpage">
         <h1 class="subpage__header">Portafolios</h1>

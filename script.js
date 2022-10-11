@@ -25,3 +25,20 @@ function openHeader(){
         header.style.display = "flex"
     }
 }
+
+window.onscroll = function() {scrollFunction()};
+let logo_header = document.getElementById('logo__header')
+let logo__header__width = document.getElementById('logo__header').style.width
+
+let header = document.getElementById('header')
+let header__padding = header.style.padding
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    logo_header.style.width = "30%"
+    header.style.padding = "0.5rem 0rem 0.25rem"
+  } else {
+    logo_header.style.width = logo__header__width
+    header.style.padding = header__padding
+  }
+}

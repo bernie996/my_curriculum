@@ -2,7 +2,7 @@
 :root{
     --white: #fff;
     --black: #000;
-    --black-transparent: rgba(0, 0, 0, 0.75)
+    --black-transparent: rgba(0, 0, 0, 0.875)
 }
 
 html {
@@ -81,14 +81,27 @@ header{
     width: 100%;
     display: flex;
     position: relative;
+    flex-wrap: wrap;
     top: 0px;
     background-color: var(--black-transparent);
     box-shadow: 0px 3px 2.5px;
-    padding: 1rem 0rem 0rem;
+    padding: 1rem 0rem 0.5rem;
     z-index: 40;
 }
+
+header > a{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+#logo__header{
+    width: 50%;
+    transition: all 0.5s;
+}
+
 .header__menu{
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,7 +126,9 @@ header{
 }
 
 .header__menu--vertical img{
-    width: 10%;
+    border: 1px solid var(--white);
+    padding: 10%;
+    width: 30%;
 }
 
 .header__menu--vertical img:hover{
@@ -128,6 +143,7 @@ header{
     width: 100%;
     text-align: center;
     transition: all 2s;
+    margin-top: 0.5rem;
 }
 
 .header__menu--vertical--ele > *{
@@ -197,6 +213,17 @@ header{
     header{
         position: fixed;
     }
+    header > a{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+    }
+    #logo__header{
+        width: 55%;
+    }
+    .header__menu{
+        width: 75%;
+    }
     .header__menu--vertical{
         display: none;
     }
@@ -206,12 +233,20 @@ header{
   }
 
 @media only screen and (min-width: 768px) {
+    #logo__header{
+        width: 55%;
+    }
     .header__menu--small-screen{
         display: none;
     }
     .header__menu--big-screen{
         display: flex;
         max-width: 900px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    #logo__header{
+        width: 40%;
     }
   }
 
@@ -242,9 +277,16 @@ main{
 
  @media only screen and (min-width: 768px) {
     main{
-        margin: 12.5% 5% 12.5%;
+        margin: 17.5% 5% 12.5%;
     }
  }
+
+ @media only screen and (min-width: 1024px) {
+    main{
+        margin: 15% 5% 12.5%;
+    }
+ }
+
 
 /* Lateral */
 
@@ -269,7 +311,7 @@ main{
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: 100px;
+    top: 125px;
     align-items: center;
     width: 100%;
 }
@@ -284,8 +326,8 @@ main{
     border-width: 0.25rem;
 }
 
-.main__lateral__content__id{
-
+.main__lateral__content__id h2{
+    font-size: 1.5rem;
 }
 
 .main__lateral__content__id > h2, h3{
@@ -438,6 +480,21 @@ main{
 
 .skills__lang__group__ele img{
     width: 100%;
+    filter: grayscale(100%);
+}
+
+.skills__lang__group__ele img:hover {
+    cursor: pointer;
+    position: relative;
+}
+
+.skills__lang__group__ele img:hover:after {
+    content: url("../img/CurriImage.png");
+    display: block;
+    position: absolute;
+    z-index: 200;
+    left: 123px; /* change this value to one that suits you */
+    top: 56px; /* change this value to one that suits you */
 }
 
 .skills__lang__group__ele p{
@@ -484,6 +541,7 @@ main{
 
 .skills__tools__group__ele img{
     width: 100%;
+    filter: grayscale(100%);
 }
 
 .skills__tools__group__ele p{
