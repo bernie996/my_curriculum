@@ -825,6 +825,7 @@ footer h2{
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
+    flex-direction: column;
 }
 
 .portfolio__ele{
